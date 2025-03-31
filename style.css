@@ -278,9 +278,10 @@ body {
     border-radius: 16px;
 }
 
-form {
+.form-title, form {
     display: none;
 }
+
 
 @media screen and (min-width: 765px) {
     .lista-consultas {

@@ -4,6 +4,8 @@
     font-size: var(--size-title);
     font-weight: var(--texto-bold);
     margin-top: 1rem;
+
+    display: block;
 }
 
 form {
