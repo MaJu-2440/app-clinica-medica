@@ -1,0 +1,106 @@
+.form-title {
+    text-align: center;
+    color: var(--cor-texto-principal);
+    font-size: var(--size-title);
+    font-weight: var(--texto-bold);
+    margin-top: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    margin: 1rem auto 2rem;
+    padding: 2rem 5rem;
+    width: 60%;
+
+    background-color: #FFF;
+    border-radius: 8px;
+}
+
+.float_buttons {
+    display: none;
+}
+
+label {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #898989;
+}
+
+form .container_consulta-data {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: start;
+    align-items: center;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+form .tipo_consulta {
+    display: inline;
+}
+
+form .tipo_consulta input {
+    margin-bottom: 0;
+}
+
+input, textarea, select {
+    background-color: #FFF;
+    border: 2px solid #ECECEC;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    outline: none;
+
+    transition: all ease-out 300ms;
+}
+
+input::placeholder, textarea::placeholder, select::placeholder {
+    color: #ADADAD;
+}
+
+input:hover, textarea:hover, select:hover {
+    border: 2px solid #CFCFCF;
+}
+
+input:focus, textarea:focus, select:focus {
+    border: 2px solid #4894FF;
+}
+
+input:disabled, textarea:disabled, select:disabled {
+    border: none;
+    background-color: #E4E4E4;
+    color: #AFADAD;
+}
+
+form button {
+    transition: all ease-out 300ms;
+
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+
+    padding: 16px;
+    background-color: #4894FF;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px #4894ff6d;
+    cursor: pointer;
+    outline: none;
+}
+
+form button:hover {
+    background-color: #4786F0;
+}
+
+form button:focus {
+    background-color: #4374dc;
+    border: 1px solid #57A4FF;
+}

@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --cor-texto-principal: #464646;
+    --cor-texto-secundario: #A3A3A3;
+    --cor-destaque: #4894FF;
+    --cor-destaque-secundaria: #FFB050;
+    --size-title: 1.35rem;
+    --size-subtitle: 1rem;
+    --size-texto: 0.8rem;
+    --texto-bold: 700;
+    --texto-semibold: 500;
+    --texto-normal: 400;
+}
+
+@media screen and (min-width: 820px) {
+    :root {
+        --size-title: 2rem;
+        --size-subtitle: 1.5rem;
+        --size-texto: 1rem;
+    }
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #ECECEC;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.header_container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 2rem 1rem;
+}
+
+.header_img {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+}
+
+.medico_nome {
+    font-weight: var(--texto-bold);
+    font-size: var(--size-title);
+    color: var(--cor-texto-principal);
+}
+
+.medico_info {
+    font-weight: var(--texto-normal);
+    font-size: var(--size-texto);
+    color: var(--cor-texto-secundario);
+}
+
+.lista-title {
+    font-weight: var(--texto-bold);
+    font-size: var(--size-subtitle);
+    color: var(--cor-texto-principal);
+    margin-left: 2rem;
+}
+
+.lista-consultas {
+    display: grid;
+}
+
+.card-consulta {
+    background-color: #FFF;
+    border-radius: 8px;
+    margin: 1rem auto;
+    max-width: 330px;
+    width: 100%;
+}
+
+.paciente {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.paciente-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.paciente-info img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    float: left;
+}
+
+.paciente-nome {
+    font-weight: var(--texto-bold);
+    font-size: var(--size-texto);
+    color: var(--cor-texto-principal);
+}
+
+.paciente-consulta {
+    font-weight: var(--texto-normal);
+    font-size: var(--size-texto);
+    color: var(--cor-texto-secundario);
+}
+
+.paciente-consulta i {
+    margin-right: .5rem;
+}
+
+.paciente span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--cor-destaque);
+    width: 2rem;
+    height: 2rem;
+    background-color: #F6F6F6;
+    border-radius: 50%;
+}
+
+.card-consulta hr {
+    border: 1px solid #F6F6F6;
+}
+
+.consulta-info {
+    padding: .7rem 1rem 1rem;
+}
+
+.consulta-hora {
+    font-weight: var(--texto-semibold);
+    font-size: var(--size-texto);
+    color: var(--cor-texto-principal);
+}
+
+.contato-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: .5rem;
+}
+
+.button-contato {
+    border-radius: 8px;
+    border: none;
+    padding: .7rem 1rem;
+    width: 100%;
+
+    text-align: center;
+    font-weight: var(--texto-semibold);
+    font-size: var(--size-texto);
+}
+
+.button-video {
+    background-color: var(--cor-destaque-secundaria);
+    color: #FFF;
+    box-shadow: 0 4px 16px rgba(255, 176, 80, 0.16);
+}
+
+.button-audio {
+    background-color: transparent;
+    border: 1px solid #ECECEC;
+    color: var(--cor-texto-principal);
+}
+
+.button-endereco {
+    background-color: var(--cor-destaque);
+    color: #FFF;
+    box-shadow: 0 4px 16px rgba(72, 148, 255, 0.16);
+}
+
+.footer_container {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 0;
+    
+    background-color: #FFF;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.06);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer_link {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    color: var(--cor-texto-secundario);
+    font-size: var(--size-texto);
+    font-weight: var(--texto-normal);
+}
+
+.footer_link i {
+    font-size: var(--size-title);
+}
+
+.footer_link:hover, .footer_link:active {
+    color: var(--cor-destaque);
+}
+
+.float_buttons {
+    position: fixed;
+    right: 1rem;
+    bottom: 5.5rem;
+
+}
+
+.plus-button-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#plus-button:checked ~ .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: -1;
+    transition: background-color .3s;
+}
+
+#plus-button:checked~ .backdrop {
+    display: block;
+}
+
+#plus-button {
+    display: none;
+}
+
+.button-container {
+    display: none;  
+}
+
+.float_buttons .button {
+    background-color: var(--cor-destaque);
+    color: #FFF;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 4px 4px rgba(53, 144, 255, 0.6);
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.float_buttons .button_label {
+    background-color: #FFF;
+    color: var(--cor-texto-principal);
+    padding: 2px 8px;
+    font-weight: var(--texto-semibold);
+    font-size: var(--size-texto);
+    border-radius: 16px;
+}
+
+form {
+    display: none;
+}
+
+@media screen and (min-width: 765px) {
+    .lista-consultas {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
+
+    .footer_container {
+        justify-content: center;
+        gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 820px) {
+    .card-consulta {
+        max-width: 380px;
+    }
+
+    .header_img {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .paciente-info img {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .button-contato {
+        padding: .7rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header_container, .consultas_container {
+        width: 85%;
+        align-self: end;
+    }
+
+    .footer_container {
+        height: 100%;
+        width: 15%;
+
+        position: fixed;
+        right: auto;
+        left: 0;
+        top: 0;
+        bottom: 0;
+
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        padding: 2rem 1rem;
+
+        border-radius: 0 12px 12px 0;
+        box-shadow: 4px 0 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .footer_link {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .float_buttons {
+        bottom: 2rem;
+        right: 2rem;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .lista-consultas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .header_container, .consultas_container {
+        padding: 2rem;
+    }
+}
